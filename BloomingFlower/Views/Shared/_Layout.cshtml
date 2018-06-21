@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Blooming Flower School</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+</head>
+<body style="font-family:Arial">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                @Html.ActionLink("BloomingFlower.edu.np", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="margin-top:5px;">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "btn btn-info " })</li>
+                    <li> @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "btn btn-info" })</li>
+                    <li class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+                            Gallery
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Images", "Index", "Home", new { area = "" }, new { @class = "btn btn-info" })</li>
+                           
+
+                        </ul>
+
+                    </li>
+                    <li>@Html.ActionLink("Admissions", "Admissions", "Home", new { area = "" }, new { @class = "btn btn-info" })</li>
+                    <li class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+                            Activities
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Images", "Activities", "Home", new { area = "" }, new { @class = "btn btn-info" })</li>
+                            
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+                            Academics
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Images", "Academics", "Home", new { area = "" }, new { @class = "btn btn-info" })</li>
+                            
+
+                        </ul>
+
+                    </li>
+                    <li>@Html.ActionLink("NewsAndEvents", "NewsAndEvents", "Home", new { area = "" }, new { @class = "btn btn-info" })</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="navbar-text">&copy;BloomingFlower.edu.np @DateTime.Now</p>
+                    <p class="navbar-text pull-right">All Rights Reserved &reg;</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
